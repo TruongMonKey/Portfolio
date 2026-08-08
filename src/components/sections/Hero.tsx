@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ArrowRight, Download, Github, Linkedin, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 const TYPING_TITLES = [
   "Backend Developer",
@@ -94,7 +95,7 @@ export default function Hero() {
 
             <div className="w-full h-full rounded-[22px] overflow-hidden bg-background relative">
               <Image
-                src="/truse.jpg"
+                src={getAssetPath("/truse.jpg")}
                 alt="Thân Văn Trường - Developer Avatar"
                 fill
                 priority
@@ -168,7 +169,7 @@ export default function Hero() {
 
             {/* CV Download Button */}
             <a
-              href="/documents/NguyenVanNam_CV.pdf"
+              href={getAssetPath("/documents/NguyenVanNam_CV.pdf")}
               download="NguyenVanNam_CV.pdf"
               className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-foreground bg-card-bg border border-card-border hover:bg-card-border/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 interface Project {
   title: string;
@@ -17,7 +18,7 @@ const PROJECTS_DATA: Project[] = [
   {
     title: "Hotel Booking System (HotelBK)",
     description: "Hệ thống đặt phòng khách sạn trực tuyến. Xây dựng Rest API hiệu năng cao với cơ chế xác thực JWT, quản lý phân quyền và thanh toán tích hợp VNPay. Hỗ trợ caching truy vấn phòng trống để giảm tải cơ sở dữ liệu.",
-    image: "/project_hotel.png",
+    image: getAssetPath("/project_hotel.png"),
     tags: ["Java", "Spring Boot", "Spring Security", "PostgreSQL", "Redis", "JWT"],
     github: "https://github.com",
     demo: "https://demo.com",
@@ -25,7 +26,7 @@ const PROJECTS_DATA: Project[] = [
   {
     title: "HRM Microservices (Enterprise HR)",
     description: "Hệ thống quản trị nhân sự quy mô doanh nghiệp thiết kế theo kiến trúc Microservices. Sử dụng Spring Cloud Config, Eureka Discovery, API Gateway và phân quyền tập trung bằng Keycloak. Giao tiếp bất đồng bộ qua Apache Kafka.",
-    image: "/project_hrm.png",
+    image: getAssetPath("/project_hrm.png"),
     tags: ["Spring Cloud", "Keycloak", "PostgreSQL", "Kafka", "Docker", "Eureka"],
     github: "https://github.com",
     demo: "https://demo.com",
@@ -33,7 +34,7 @@ const PROJECTS_DATA: Project[] = [
   {
     title: "Job Finder Platform (JobSphere)",
     description: "Nền tảng tìm kiếm việc làm tối ưu cho nhà tuyển dụng và ứng viên. Tích hợp công cụ Elasticsearch cho phép tìm kiếm từ khóa cực nhanh và chính xác. Frontend xây dựng bằng Next.js 15 kết hợp Tailwind CSS.",
-    image: "/project_job.png",
+    image: getAssetPath("/project_job.png"),
     tags: ["Spring Boot", "Elasticsearch", "ReactJS", "Next.js", "TailwindCSS"],
     github: "https://github.com",
     demo: "https://demo.com",
@@ -41,7 +42,7 @@ const PROJECTS_DATA: Project[] = [
   {
     title: "YOLOv8 Object Detection System",
     description: "Hệ thống camera giám sát thông minh nhận diện vật thể thời gian thực. Tích hợp luồng xử lý ảnh từ YOLOv8 & OpenCV (Python) với hệ thống quản trị backend Java Spring Boot qua REST API và WebSocket để hiển thị thông báo tức thời.",
-    image: "/project_yolo.png",
+    image: getAssetPath("/project_yolo.png"),
     tags: ["Spring Boot", "Python", "YOLOv8", "OpenCV", "WebSocket", "Docker"],
     github: "https://github.com",
     demo: "https://demo.com",

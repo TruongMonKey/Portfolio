@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Award, Calendar, ExternalLink, X, Eye } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 interface Certificate {
   title: string;
@@ -19,28 +20,28 @@ const CERTIFICATES_DATA: Certificate[] = [
     title: "Oracle Certified Associate, Java SE 8 Programmer",
     issuer: "Oracle Corporation",
     date: "Tháng 12/2025",
-    image: "/cert_oracle.png",
+    image: getAssetPath("/cert_oracle.png"),
   },
   {
     id: "aws",
     title: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services (AWS)",
     date: "Tháng 05/2026",
-    image: "/cert_aws.png",
+    image: getAssetPath("/cert_aws.png"),
   },
   {
     id: "spring",
     title: "Spring Framework Developer Certification",
     issuer: "Tech Academy Pro",
     date: "Tháng 08/2026",
-    image: "/cert_spring.png",
+    image: getAssetPath("/cert_spring.png"),
   },
   {
     id: "ielts",
     title: "IELTS Academic - Band Score 7.5",
     issuer: "IDP Education / British Council",
     date: "Tháng 03/2025",
-    image: "/cert_ielts.png",
+    image: getAssetPath("/cert_ielts.png"),
   },
 ];
 
